@@ -58,7 +58,7 @@ jobs:
     needs: [build]
     if: github.event.commits && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Trigger CI build
         env:
           UNLEASH_CI_BUILDER_GITHUB_TOKEN: ${{ secrets.UNLEASH_CI_BUILDER_GITHUB_TOKEN }}
